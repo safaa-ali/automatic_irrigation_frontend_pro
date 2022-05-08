@@ -1,0 +1,15 @@
+
+.container-fluid{
+  background: #1987544d;
+
+  .flex-container{
+    display: flex;
+    justify-content: space-evenly;
+
+    .form-control{
+      min-width: 300px;
+
+    }
+  }
+}
+

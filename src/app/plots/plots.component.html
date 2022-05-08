@@ -1,0 +1,73 @@
+<!-- <div class="card text-left" >
+  <div class="card-body" *ngFor="let item of list">
+
+    <div class="flex-container">
+      <p class="card-text">Crop name : {{item.cropName }}</p>
+      <p class="card-text">agricultural Season : {{ item.agriculturalSeason }}</p>
+    </div>
+    <div class="flex-container">
+      <p class="card-text">land quality : {{ item.landQuality }}</p>
+      <p class="card-text">land type : {{ type }}</p>
+    </div>
+    <div class="flex-container">
+      <p class="card-text">Irrigation Times Of Month : {{ item.IrrigationTimesOfMonth }}</p>
+      <p class="card-text">irrigation date : {{ item.irrigationDate }}</p>
+
+    </div>
+    <div class="flex-container">
+      <p class="card-text">irrigation Times : {{ item.irrigationTimes  }} </p>
+      <p class="card-text">Area in acres : {{ item.areaInAcres }}</p>
+
+    </div>
+    <button  (click)="editPlot(item.plotId)">Edit</button>
+  </div>
+</div>
+
+
+ -->
+
+
+ <table class="table table-striped m-4">
+  <thead>
+    <tr>
+      <th scope="col">PlotlId</th>
+      <th scope="col">Crop name</th>
+      <th scope="col">agricultural Season </th>
+      <th scope="col">irrigation Status </th>
+
+      <th scope="col">land quality</th>
+      <th scope="col">land Type</th>
+      <th scope="col">Irrigation Date</th>
+      <th scope="col">irrigation Times </th>
+      <th scope="col">Area in acres </th>
+      <th scope="col">Controles </th>
+
+
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let item of list">
+      <th scope="row" >{{item.plotId}}</th>
+
+      <td>{{ item.cropName }}</td>
+      <td>{{ item.agriculturalSeason }}</td>
+      <td>{{ item.irrigationStatus }}</td>
+
+      <td>{{ item.landQuality }}</td>
+      <td>{{ item.landType }}</td>
+      <td>{{ item.irrigationDate }}</td>
+      <td>{{ item.irrigationTimes }}</td>
+
+      <td>{{ item.areaInAcres }}</td>
+    <td class="special_Td">
+      <button class="btn btn-success" (click)="editPlot(item.plotId)">Edit Plot</button>
+        <button class="btn btn-danger" (click)="deletePlot(item.plotId)">Delet Plot</button>
+    </td>
+    <!-- <td><button class="btn btn-warning" (click)="editPlot(item.plotId)">Edit Plot</button></td>
+    <td><button class="btn btn-danger" (click)="deletePlot(item.plotId)">Delet Plot</button></td> -->
+
+
+    </tr>
+
+  </tbody>
+</table>

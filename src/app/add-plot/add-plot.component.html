@@ -1,0 +1,130 @@
+<div class="container-fluid">
+  <form
+    [formGroup]="myForm"
+    (ngSubmit)="onSubmit(myForm)"
+    class="row g-3 general-form"
+  >
+    <h2 class="title">add Plot</h2>
+    <div class="flex-container">
+
+      <label>
+        Crop Name:
+        <input
+          formControlName="cropName"
+          placeholder="Crop Name"
+          class="form-control"
+        />
+      </label>
+
+
+        <label>
+          Irrigation Plot Status
+          <select formControlName="status"
+          class="form-control"
+
+          (change)="onChange($event)" formControlName="status">
+            <option [ngValue]="null" disabled>Select Country</option>
+            <option
+              *ngFor="let status of IrrigationStatus"
+              [ngValue]="status.value"
+
+            >
+              {{ status.value }}
+            </option>
+          </select>
+        </label>
+
+      </div>
+
+      <div class="flex-container">
+        <label>
+            Area In Acres
+            <input
+              formControlName="area"
+              placeholder="Area In Acres"
+              class="form-control"
+            />
+          </label>
+
+
+        <label>
+          agricultural Season
+          <select formControlName="season"
+          class="form-control"
+
+          (change)="onChange($event)" formControlName="season">
+            <option [ngValue]="null" disabled>Select Country</option>
+            <option
+              *ngFor="let season of agriculturalSeason"
+              [ngValue]="season.value"
+
+            >
+              {{ season.value }}
+            </option>
+          </select>
+        </label>
+</div>
+      <div class="flex-container">
+        <label>
+          Irrigation Date
+          <select formControlName="date"
+          class="form-control"
+          >
+            <option [ngValue]="null" disabled>Select Country</option>
+            <option *ngFor="let date of IrrigationDate" [ngValue]="date.value">
+              {{ date.value }}
+            </option>
+          </select>
+        </label>
+
+        <label>
+          Land Quality
+          <select formControlName="quility"
+          class="form-control"
+          >
+            <option [ngValue]="null" disabled>Select Country</option>
+            <option *ngFor="let quility of LandQuality" [ngValue]="quility.value">
+              {{ quility.value }}
+            </option>
+          </select>
+        </label>
+      </div>
+
+
+      <div class="flex-container">
+        <label>
+          Irrigation Times Of Month
+          <select formControlName="times"
+           class="form-control"
+          >
+            <option [ngValue]="null" disabled>Select Country</option>
+            <option
+              *ngFor="let times of IrrigationTimesOfMonth"
+              [ngValue]="times.value"
+            >
+              {{ times.value }}
+            </option>
+          </select>
+        </label>
+        <label>
+          Land Type
+          <select formControlName="type"
+          class="form-control"
+          >
+            <option [ngValue]="null" disabled>Select Country</option>
+            IrrigationDate = [
+            <option *ngFor="let type of LandType" [ngValue]="type.value">
+              {{ type.value }}
+            </option>
+          </select>
+        </label>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <button type="submit">Send</button>
+        </div>
+      </div>
+
+  </form>
+</div>

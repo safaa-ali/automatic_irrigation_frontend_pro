@@ -1,0 +1,26 @@
+
+.card-body{
+  margin: 6px;
+  .flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    background: #19875499;
+    padding: 20px 0px;
+    color: #fff;
+    font-family: cursive;
+    // margin: 6px;
+    text-transform: capitalize;
+    font-weight: 700;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+
+  }
+}
+
+
+
+.special_Td{
+  button{
+    margin: 10px;
+
+  }
+}
